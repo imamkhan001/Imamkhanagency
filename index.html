@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imam Khan | Web Designer, Developer & WordPress Expert</title>
+    <meta name="description" content="Imam Khan is a web designer, web developer and WordPress expert in Bangalore specializing in business website development, custom WordPress websites, lead-generation websites and modern responsive web design." />
+    <meta property="og:title" content="Imam Khan | Web Designer, Developer & WordPress Expert" />
+    <meta property="og:description" content="Imam Khan is a web designer, web developer and WordPress expert in Bangalore specializing in business website development, custom WordPress websites, lead-generation websites and modern responsive web design." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="google-site-verification" content="GSC_VERIFICATION_PLACEHOLDER" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script>
+      // Ignore HMR / Vite client WebSocket connection errors in sandbox iframe environment
+      window.addEventListener('error', function(event) {
+        var msg = (event && event.message) ? String(event.message) : '';
+        var filename = (event && event.filename) ? String(event.filename) : '';
+        var errorStr = (event && event.error) ? String(event.error) : '';
+        if (
+          msg.includes('WebSocket') ||
+          msg.includes('createWebSocketModuleRunnerTransport') ||
+          filename.includes('@vite/client') ||
+          errorStr.includes('WebSocket') ||
+          errorStr.includes('createWebSocketModuleRunnerTransport')
+        ) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          return true;
+        }
+      }, true);
+      window.addEventListener('unhandledrejection', function(event) {
+        var reasonStr = (event && event.reason) ? String(event.reason) : '';
+        if (
+          reasonStr.includes('WebSocket') ||
+          reasonStr.includes('createWebSocketModuleRunnerTransport') ||
+          reasonStr.includes('@vite/client')
+        ) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+        }
+      }, true);
+    </script>
+    <link rel="preload" as="image" href="/images/imam-khan-professional-800w.webp" imagesrcset="/images/imam-khan-professional-400w.webp 400w, /images/imam-khan-professional-800w.webp 800w" imagesizes="(max-width: 768px) 320px, 400px" fetchpriority="high">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=IBM+Plex+Serif:wght@400;600;700&family=PT+Serif:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=IBM+Plex+Serif:wght@400;600;700&family=PT+Serif:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#050505] text-[#f4f4f6] selection:bg-[#00ff88]/30 selection:text-[#00ff88]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

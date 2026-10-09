@@ -1,0 +1,8 @@
+# robots.txt for Imam Khan Web Design
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://imamkhan.vercel.app/sitemap.xml

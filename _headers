@@ -1,0 +1,25 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://*.supabase.co https://www.google-analytics.com https://api.whatsapp.com; frame-src 'self' https://www.google.com https://royalfitnesssgym.netlify.app https://dentalcare.netlify.app https://dentalacare.netlify.app https://motivgym.netlify.app https://skdental.netlify.app https://newcardecor.netlify.app https://dev-dentalcareindia.pantheonsite.io; child-src 'self' https://www.google.com https://royalfitnesssgym.netlify.app https://dentalcare.netlify.app https://dentalacare.netlify.app https://motivgym.netlify.app https://skdental.netlify.app https://newcardecor.netlify.app https://dev-dentalcareindia.pantheonsite.io;
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+/*.html
+  Cache-Control: no-cache
+
+/
+  Cache-Control: no-cache
+
+/favicon*
+  Cache-Control: public, max-age=86400
+
+/site.webmanifest
+  Cache-Control: public, max-age=86400
