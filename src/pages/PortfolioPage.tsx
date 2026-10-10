@@ -23,7 +23,7 @@ export const PortfolioPage: React.FC = () => {
         canonicalUrl="/portfolio"
       />
 
-      <div className="pt-28 pb-16 bg-[#050505] min-h-screen">
+      <div className="pt-28 pb-[96px] bg-[#050505] min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* A1. HEADER BLOCK */}

@@ -7,7 +7,7 @@ import { siteConfig } from '../../data/siteConfig';
 
 export const ContactSection: React.FC = () => {
   return (
-    <section id="contact" className="py-24 bg-[#07070a] relative overflow-hidden border-t border-[#1a1a24] scroll-mt-20">
+    <section id="contact" className="pt-24 pb-[96px] bg-[#07070a] relative overflow-hidden border-t border-[#1a1a24] scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}

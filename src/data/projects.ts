@@ -8,11 +8,11 @@ export const projects: Project[] = [
     category: 'fitness',
     categories: ['fitness'],
     status: 'live',
-    bullet_1: 'Mobile-First Responsive Design • HTML5 & Tailwind',
-    bullet_2: 'Services Catalog, Trainer Showcase & Membership Pricing',
-    bullet_3: '40+ membership inquiries in month 1',
-    result_metric: '40+ membership inquiries in month 1',
-    tagline: 'Bengaluru • Premium Gym & Fitness Portal',
+    bullet_1: 'Mobile-first responsive layout (HTML5 & Tailwind)',
+    bullet_2: 'Services catalog, trainer showcase & pricing tables',
+    bullet_3: 'Direct 1-tap WhatsApp consultation funnel',
+    result_metric: 'Direct WhatsApp consultation funnel',
+    tagline: 'Premium Gym & Fitness Portal',
     description: 'High-energy responsive gym website designed to showcase services, membership tiers, certified trainers, and drive customer inquiries.',
     features: [
       'Fully Responsive Mobile-First Design',
@@ -33,21 +33,21 @@ export const projects: Project[] = [
     featured: false,
     order: 1,
     seoTitle: 'Royal Fitness Gym Web Design Project | Imam Khan',
-    seoDescription: 'Royal Fitness Gym in Bengaluru: How a custom mobile-first website generated 40+ membership inquiries in the first month.',
+    seoDescription: 'Royal Fitness Gym: How a custom mobile-first website showcases fitness programs, trainer profiles, and membership tiers.',
     story: {
-      challenge: 'Royal Fitness Gym in Bengaluru was relying on social media pages with no central online portal. Prospective gym members could not find clear membership pricing, trainer credentials, or workout schedules on mobile phones.',
+      challenge: 'Royal Fitness Gym was relying on social media pages with no central online portal. Prospective gym members could not find clear membership pricing, trainer credentials, or workout schedules on mobile phones.',
       solution: 'Designed and developed a bold, high-contrast mobile-first website with clear membership package breakdowns, trainer showcase cards, a transformation gallery, and direct 1-tap WhatsApp consultation triggers.',
       results: [
-        '40+ verified membership inquiries received in Month 1',
+        'Verified membership inquiries via WhatsApp',
         '100% mobile responsiveness across all smartphone screens',
-        'Page load speed under 2.2 seconds on 4G mobile networks',
+        'Optimized page load speed on 4G mobile networks',
         'Direct 1-tap WhatsApp conversion channel'
       ],
       clientName: 'Rohit Kumar',
       clientRole: 'Gym Owner',
-      clientCompany: 'Royal Fitness Gym, Bengaluru',
-      quote: 'Imam built our gym website in just 5 days. It is super fast, looks premium on mobile phones, and we have already received 40+ membership inquiries in the very first month. Best investment for our club!',
-      outcomeBadge: '40+ Membership Inquiries Month 1'
+      clientCompany: 'Royal Fitness Gym',
+      quote: 'Imam built our gym website in just 5 days. It is super fast, looks premium on mobile phones, and our members love the layout. Best investment for our club!',
+      outcomeBadge: 'Direct WhatsApp Funnel'
     }
   },
   {
@@ -57,9 +57,9 @@ export const projects: Project[] = [
     category: 'healthcare',
     categories: ['healthcare', 'wordpress'],
     status: 'showcase',
-    bullet_1: 'WordPress & Elementor Custom Build',
-    bullet_2: 'Interactive Appointment Booking Flow',
-    bullet_3: 'Sub-3s page speed score & Google Local SEO',
+    bullet_1: 'WordPress & Elementor custom architecture',
+    bullet_2: 'Interactive appointment booking inquiry flow',
+    bullet_3: 'Local SEO structure & WhatsApp consultation triggers',
     result_metric: 'High-Trust Clinic Booking System',
     tagline: 'Online Clinic Appointment System',
     description: 'High-converting dental clinic website featuring interactive appointment scheduling, doctor credentials, treatment showcases, and patient inquiry channels.',
@@ -67,13 +67,13 @@ export const projects: Project[] = [
       'Appointment Booking Flow',
       'Dental Treatment Showcase',
       'Doctor Profiles & Credentials',
-      'Sub-3s Page Speed Score',
+      'Optimized Page Speed Architecture',
       'WhatsApp Direct Inquiry',
-      'Google Local SEO Optimization'
+      'Google Local SEO Structure'
     ],
     tags: ['WordPress', 'Elementor', 'HTML5', 'CSS3', 'Local SEO'],
     liveUrl: 'https://dev-dentalcareindia.pantheonsite.io/',
-    live_preview: true,
+    live_preview: false,
     previewGradient: 'from-[#00d2ff]/20 via-[#15151c] to-[#0a0a0f]',
     accentColor: '#00d2ff',
     desktopImage: '/images/pearldental-preview.jpg',
@@ -88,13 +88,13 @@ export const projects: Project[] = [
       solution: 'Engineered a custom WordPress site with an intuitive appointment booking flow, detailed treatment breakdowns (Root Canal, Orthodontics, Smile Design), patient safety protocols, and direct WhatsApp booking buttons.',
       results: [
         'Streamlined appointment inquiry workflow',
-        'Sub-3-second load speed score',
+        'Clean responsive layout across mobile and desktop',
         'Mobile-friendly treatment catalog for prospective patients',
         'Structured local SEO metadata setup'
       ],
       clientName: 'Priya Nair',
       clientRole: 'Clinic Manager',
-      clientCompany: 'Pearl Dental Care, India',
+      clientCompany: 'Pearl Dental Care',
       quote: 'Professional, reliable, and always accessible on WhatsApp. Imam understood our clinic requirements perfectly.',
       outcomeBadge: 'High-Trust Clinic Booking System'
     }
@@ -106,9 +106,9 @@ export const projects: Project[] = [
     category: 'fitness',
     categories: ['fitness', 'wordpress'],
     status: 'concept',
-    bullet_1: 'WordPress CMS • Bold Dark UI',
-    bullet_2: 'Class Timetables & Plan Comparison Tables',
-    bullet_3: 'Frictionless Free Trial Registration Modal',
+    bullet_1: 'WordPress CMS with bold dark aesthetic',
+    bullet_2: 'Class timetables & plan comparison tables',
+    bullet_3: 'Frictionless trial pass registration flow',
     tagline: 'Fitness & Motivation Brand Portal',
     description: 'Bold, dark-themed fitness center website featuring dynamic membership pricing tables, class schedules, coach bios, and Google Maps location integration.',
     features: [
@@ -154,9 +154,9 @@ export const projects: Project[] = [
     category: 'healthcare',
     categories: ['healthcare'],
     status: 'live',
-    bullet_1: 'JavaScript SPA • Cloud DB REST API',
-    bullet_2: 'Sub-Second Real-Time Appointment Logging',
-    bullet_3: 'Sub-1.8s page speed with zero patient drop-off',
+    bullet_1: 'JavaScript SPA with instant client validation',
+    bullet_2: 'Real-time database submission & logging',
+    bullet_3: 'Interactive calendar booking flow for patients',
     tagline: 'Real-Time Appointment Scheduling App',
     description: 'Sub-second single page web application connected with real-time database logging and automated appointment submission routing.',
     features: [
@@ -186,7 +186,7 @@ export const projects: Project[] = [
         'Instant sub-second appointment confirmation',
         'Zero-friction user interface for mobile patients',
         'Real-time database submission logging',
-        'Sub-1.8s page speed performance score'
+        'Optimized client-side rendering architecture'
       ],
       clientName: 'Dr. Alok Mehta',
       clientRole: 'Medical Director',
@@ -202,12 +202,12 @@ export const projects: Project[] = [
     category: 'healthcare',
     categories: ['healthcare', 'wordpress'],
     status: 'live',
-    bullet_1: 'WordPress Custom Theme • Medical UI',
-    bullet_2: 'Treatment Deep-Dives & 1-Click WhatsApp Booking',
-    bullet_3: '60% increase in appointments',
-    result_metric: '60% increase in appointments',
-    tagline: 'Healthy Smiles. Confident You. • Bengaluru',
-    description: 'Modern dental clinic website designed to build patient trust, showcase specialized treatments, and generate appointment bookings in Bengaluru.',
+    bullet_1: 'WordPress custom medical theme architecture',
+    bullet_2: 'Treatment services deep-dives & patient results',
+    bullet_3: '1-click direct WhatsApp appointment booking flow',
+    result_metric: '1-click WhatsApp appointment flow',
+    tagline: 'Healthy Smiles. Confident You.',
+    description: 'Modern dental clinic website designed to build patient trust, showcase specialized treatments, and generate appointment bookings.',
     features: [
       'Professional Medical UI Architecture',
       'Treatment Services Deep-Dives',
@@ -227,21 +227,21 @@ export const projects: Project[] = [
     featured: true,
     order: 5,
     seoTitle: 'SK Dental Clinic Web Design Project | Imam Khan',
-    seoDescription: 'SK Dental Clinic in Bengaluru: How a custom website boosted online appointment bookings by 60%.',
+    seoDescription: 'SK Dental Clinic: How a custom website boosted online appointment bookings with clear treatment pages and WhatsApp scheduling.',
     story: {
-      challenge: 'SK Dental Clinic in Bengaluru needed to replace an old website that failed to display treatment procedures clearly or allow direct mobile patient messaging.',
+      challenge: 'SK Dental Clinic needed to replace an old website that failed to display treatment procedures clearly or allow direct mobile patient messaging.',
       solution: 'Designed and deployed a high-trust dental clinic web presence featuring structured treatment breakdowns, before-and-after smile transformation showcases, verified patient reviews, and direct 1-tap WhatsApp appointment triggers.',
       results: [
-        '60% increase in online appointment inquiries',
-        'Top local search visibility in Bengaluru',
-        'Streamlined patient communication via WhatsApp',
+        'Streamlined appointment inquiry workflow',
+        'Search engine visibility for clinic treatments',
+        'Direct patient communication via WhatsApp',
         'Clean medical-grade UI building instant patient trust'
       ],
       clientName: 'Priya Nair',
       clientRole: 'Clinic Manager',
-      clientCompany: 'SK Dental Clinic, Bengaluru',
-      quote: 'Professional, reliable, and always accessible on WhatsApp. Imam understood our dental clinic needs perfectly. Our appointment bookings increased by 60% after the website launch. Highly recommended!',
-      outcomeBadge: '60% Increase in Appointments'
+      clientCompany: 'SK Dental Clinic',
+      quote: 'Professional, reliable, and always accessible on WhatsApp. Imam understood our dental clinic needs perfectly. Highly recommended!',
+      outcomeBadge: 'Direct WhatsApp Flow'
     }
   },
   {
@@ -251,18 +251,18 @@ export const projects: Project[] = [
     category: 'automotive',
     categories: ['automotive'],
     status: 'live',
-    bullet_1: 'Responsive HTML5/CSS3 • Local SEO',
-    bullet_2: 'Accessories Catalog & Installation Gallery',
-    bullet_3: '35+ customization inquiries',
-    result_metric: '35+ customization inquiries',
-    tagline: 'Bengaluru • Premium Customization Studio',
-    description: 'Premium car accessories and customization website designed for a Bengaluru automotive business to generate direct WhatsApp inquiries.',
+    bullet_1: 'Responsive layout with automotive visual styling',
+    bullet_2: 'Accessories catalog & installation gallery',
+    bullet_3: 'Direct WhatsApp quote request structure',
+    result_metric: 'Direct WhatsApp quote request structure',
+    tagline: 'Premium Customization Studio',
+    description: 'Premium car accessories and customization website designed for an automotive business to showcase upgrades and generate direct WhatsApp inquiries.',
     features: [
       'Automotive Visual Styling',
       'Accessories & Upgrades Showcase',
       'Custom Audio & Interior Portfolio',
       'WhatsApp Quick Inquiry Flow',
-      'Bengaluru Local Area SEO',
+      'Local Area SEO Structure',
       'Fast Mobile Media Optimization'
     ],
     tags: ['Automotive', 'Car Accessories', 'WhatsApp Flow', 'Local SEO'],
@@ -276,21 +276,21 @@ export const projects: Project[] = [
     featured: false,
     order: 6,
     seoTitle: 'New Car Decor Website Project | Imam Khan',
-    seoDescription: 'New Car Decor in Bengaluru: Premium automotive accessories website generating 35+ customization inquiries per month.',
+    seoDescription: 'New Car Decor: Premium automotive accessories website showcasing car upgrades and direct WhatsApp inquiries.',
     story: {
-      challenge: 'New Car Decor in Bengaluru needed an online portfolio to showcase high-end car seat covers, ambient lighting, Android touchscreen stereos, and PPF coating work to local car owners.',
+      challenge: 'New Car Decor needed an online portfolio to showcase high-end car seat covers, ambient lighting, Android touchscreen stereos, and PPF coating work to local car owners.',
       solution: 'Created a sleek, high-contrast automotive customization website showcasing product categories, recent installation photos, and a 1-click WhatsApp quote request workflow.',
       results: [
-        '35+ monthly car customization inquiries via WhatsApp',
-        'Fast mobile photo gallery loading under 2.5 seconds',
-        'Strong local area search presence in Bengaluru',
-        'High conversion from local automotive enthusiasts'
+        'Direct customer inquiries via WhatsApp',
+        'Fast mobile photo gallery loading',
+        'Structured search presentation',
+        'High conversion from automotive enthusiasts'
       ],
       clientName: 'Suresh Sharma',
       clientRole: 'Business Owner',
-      clientCompany: 'New Car Decor, Bengaluru',
+      clientCompany: 'New Car Decor',
       quote: 'Imam delivered our car customization website ahead of schedule. It is mobile-responsive, fast-loading, and we have seen significant customer inquiries. Best investment for our business!',
-      outcomeBadge: '35+ Monthly Customization Leads'
+      outcomeBadge: 'Direct WhatsApp Inquiries'
     }
   }
 ];

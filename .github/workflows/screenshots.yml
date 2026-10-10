@@ -1,0 +1,37 @@
+name: Update project screenshots
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 1 * *'
+
+permissions:
+  contents: write
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install --no-save playwright sharp
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Capture screenshots
+        run: node scripts/capture-screenshots.mjs
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name "screenshot-bot"
+          git config --global user.email "screenshot-bot@users.noreply.github.com"
+          git add public/images/*-preview.jpg public/images/*-mobile.jpg
+          git diff --staged --quiet || (git commit -m "chore: update automated project screenshots" && git push)

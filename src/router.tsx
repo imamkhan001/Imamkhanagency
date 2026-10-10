@@ -1,9 +1,10 @@
 import React, { lazy, Suspense } from 'react';
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import { Layout } from './components/layout/Layout';
+import HomePage from './pages/HomePage';
+import { LoadingScreen } from './components/ui/LoadingScreen';
 
-// Lazy-loaded route components
-const HomePage = lazy(() => import('./pages/HomePage'));
+// Lazy-loaded route components (admin, tools, and secondary pages)
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const ServiceDetailPage = lazy(() => import('./pages/ServiceDetailPage'));
@@ -24,17 +25,6 @@ const TermsPage = lazy(() => import('./pages/TermsPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 const AdminPage = lazy(() => import('./admin/AdminPage'));
 
-// Route loading fallback with refined skeleton
-const RouteLoader = () => (
-  <div className="min-h-[80vh] flex flex-col items-center justify-center p-8 space-y-4 max-w-2xl mx-auto">
-    <div className="w-12 h-12 rounded-xl bg-[#00ff88]/10 border border-[#00ff88]/30 flex items-center justify-center text-[#00ff88] font-bold text-lg animate-pulse">
-      IK
-    </div>
-    <div className="w-48 h-3 rounded-full bg-white/10 animate-pulse" />
-    <div className="w-32 h-2 rounded-full bg-white/5 animate-pulse" />
-  </div>
-);
-
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -42,16 +32,12 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: (
-          <Suspense fallback={<RouteLoader />}>
-            <HomePage />
-          </Suspense>
-        )
+        element: <HomePage />
       },
       {
         path: 'about',
         element: (
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<LoadingScreen />}>
             <AboutPage />
           </Suspense>
         )
@@ -59,7 +45,7 @@ export const router = createBrowserRouter([
       {
         path: 'services',
         element: (
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<LoadingScreen />}>
             <ServicesPage />
           </Suspense>
         )
@@ -67,7 +53,7 @@ export const router = createBrowserRouter([
       {
         path: 'services/:slug',
         element: (
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<LoadingScreen />}>
             <ServiceDetailPage />
           </Suspense>
         )
@@ -75,11 +61,12 @@ export const router = createBrowserRouter([
       {
         path: 'portfolio',
         element: (
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<LoadingScreen />}>
             <PortfolioPage />
           </Suspense>
         )
       },
+      // Redirect legacy/individual case study URLs to the portfolio page
       {
         path: 'portfolio/*',
         element: <Navigate to="/portfolio" replace />
@@ -87,7 +74,7 @@ export const router = createBrowserRouter([
       {
         path: 'pricing',
         element: (
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<LoadingScreen />}>
             <PricingPage />
           </Suspense>
         )
@@ -95,7 +82,7 @@ export const router = createBrowserRouter([
       {
         path: 'blog',
         element: (
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<LoadingScreen />}>
             <BlogPage />
           </Suspense>
         )
@@ -103,7 +90,7 @@ export const router = createBrowserRouter([
       {
         path: 'blog/:slug',
         element: (
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<LoadingScreen />}>
             <BlogPostPage />
           </Suspense>
         )
@@ -111,7 +98,7 @@ export const router = createBrowserRouter([
       {
         path: 'resources',
         element: (
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<LoadingScreen />}>
             <ResourcesPage />
           </Suspense>
         )
@@ -119,7 +106,7 @@ export const router = createBrowserRouter([
       {
         path: 'tools/website-cost-calculator',
         element: (
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<LoadingScreen />}>
             <WebsiteCostCalculatorPage />
           </Suspense>
         )
@@ -127,7 +114,7 @@ export const router = createBrowserRouter([
       {
         path: 'tools/free-website-audit',
         element: (
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<LoadingScreen />}>
             <FreeWebsiteAuditPage />
           </Suspense>
         )
@@ -135,7 +122,7 @@ export const router = createBrowserRouter([
       {
         path: 'faq',
         element: (
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<LoadingScreen />}>
             <FaqPage />
           </Suspense>
         )
@@ -143,15 +130,15 @@ export const router = createBrowserRouter([
       {
         path: 'contact',
         element: (
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<LoadingScreen />}>
             <ContactPage />
           </Suspense>
         )
       },
       {
-        path: 'book-a-call',
+        path: 'book-call',
         element: (
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<LoadingScreen />}>
             <BookCallPage />
           </Suspense>
         )
@@ -159,7 +146,7 @@ export const router = createBrowserRouter([
       {
         path: 'thank-you',
         element: (
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<LoadingScreen />}>
             <ThankYouPage />
           </Suspense>
         )
@@ -167,7 +154,7 @@ export const router = createBrowserRouter([
       {
         path: 'privacy-policy',
         element: (
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<LoadingScreen />}>
             <PrivacyPolicyPage />
           </Suspense>
         )
@@ -175,40 +162,16 @@ export const router = createBrowserRouter([
       {
         path: 'terms',
         element: (
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<LoadingScreen />}>
             <TermsPage />
           </Suspense>
         )
       },
-      // Bangalore location routes from sitemap
+      // City/neighborhood landing pages (e.g. /web-designer-in-indiranagar)
       {
-        path: 'web-designer-bangalore',
+        path: 'web-designer-in-:areaSlug',
         element: (
-          <Suspense fallback={<RouteLoader />}>
-            <LocationPage />
-          </Suspense>
-        )
-      },
-      {
-        path: 'website-design-indiranagar',
-        element: (
-          <Suspense fallback={<RouteLoader />}>
-            <LocationPage />
-          </Suspense>
-        )
-      },
-      {
-        path: 'web-design-whitefield',
-        element: (
-          <Suspense fallback={<RouteLoader />}>
-            <LocationPage />
-          </Suspense>
-        )
-      },
-      {
-        path: 'wordpress-developer-koramangala',
-        element: (
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<LoadingScreen />}>
             <LocationPage />
           </Suspense>
         )
@@ -217,7 +180,7 @@ export const router = createBrowserRouter([
       {
         path: 'admin',
         element: (
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<LoadingScreen />}>
             <AdminPage />
           </Suspense>
         )
@@ -226,7 +189,7 @@ export const router = createBrowserRouter([
       {
         path: '*',
         element: (
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<LoadingScreen />}>
             <NotFoundPage />
           </Suspense>
         )

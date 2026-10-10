@@ -79,6 +79,8 @@ export interface Testimonial {
   outcomeBadge: string;
   stars: number;
   initials: string;
+  category?: string;
+  location?: string;
 }
 
 export interface FAQItem {

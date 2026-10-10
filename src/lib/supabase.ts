@@ -1,7 +1,7 @@
 import { ClientSubmission } from '../types';
 
-export const SUPABASE_URL = (import.meta.env.VITE_SUPABASE_URL as string) || '';
-export const SUPABASE_ANON_KEY = (import.meta.env.VITE_SUPABASE_ANON_KEY as string) || '';
+export const SUPABASE_URL = (import.meta.env?.VITE_SUPABASE_URL as string) || '';
+export const SUPABASE_ANON_KEY = (import.meta.env?.VITE_SUPABASE_ANON_KEY as string) || '';
 
 /**
  * Inserts a new lead into Supabase using RLS-enabled public insert policy
@@ -13,8 +13,12 @@ export async function submitLeadToSupabase(submission: ClientSubmission): Promis
   }
 
   try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 4000);
+
     const res = await fetch(`${SUPABASE_URL}/rest/v1/messages`, {
       method: 'POST',
+      signal: controller.signal,
       headers: {
         'apikey': SUPABASE_ANON_KEY,
         'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
@@ -30,6 +34,7 @@ export async function submitLeadToSupabase(submission: ClientSubmission): Promis
         message: (submission.message || '').slice(0, 2000)
       })
     });
+    clearTimeout(timeoutId);
     return res.ok;
   } catch (err) {
     console.warn('Supabase lead submission notice:', err);
@@ -51,12 +56,17 @@ export async function fetchLeadsFromSupabase(adminToken?: string): Promise<Clien
   if (!token) return [];
 
   try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 4000);
+
     const res = await fetch(`${SUPABASE_URL}/rest/v1/messages?select=*&order=created_at.desc`, {
+      signal: controller.signal,
       headers: {
         'apikey': SUPABASE_ANON_KEY,
         'Authorization': `Bearer ${token}`
       }
     });
+    clearTimeout(timeoutId);
     if (res.ok) {
       const data = await res.json();
       return Array.isArray(data) ? data : [];

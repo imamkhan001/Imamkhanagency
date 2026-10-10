@@ -48,9 +48,99 @@
     </script>
     <link rel="preload" as="image" href="/images/imam-khan-professional-800w.webp" imagesrcset="/images/imam-khan-professional-400w.webp 400w, /images/imam-khan-professional-800w.webp 800w" imagesizes="(max-width: 768px) 320px, 400px" fetchpriority="high">
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=IBM+Plex+Serif:wght@400;600;700&family=PT+Serif:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=IBM+Plex+Serif:wght@400;600;700&family=PT+Serif:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        try {
+          var isReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          var isAdmin = window.location.pathname.indexOf('/admin') === 0;
+          var hasSeenSplash = false;
+          try {
+            hasSeenSplash = !!sessionStorage.getItem('ik_splash');
+          } catch (e) {}
+
+          if (hasSeenSplash || isAdmin || isReducedMotion) {
+            document.documentElement.classList.add('no-splash');
+          } else {
+            try {
+              sessionStorage.setItem('ik_splash', '1');
+            } catch (e) {}
+          }
+        } catch (err) {}
+      })();
+    </script>
+    <noscript><style>#splash{display:none !important;}</style></noscript>
+    <style>
+      html.no-splash #splash {
+        display: none !important;
+      }
+      #splash {
+        position: fixed;
+        inset: 0;
+        background-color: #050505;
+        z-index: 99999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: splashFadeOut 250ms ease-out 600ms forwards;
+      }
+      #splash .splash-logo {
+        width: 96px;
+        height: 96px;
+        filter: drop-shadow(0 0 18px rgba(0, 255, 136, 0.7));
+        animation: logoScaleIn 200ms ease-out forwards;
+      }
+      @media (min-width: 768px) {
+        #splash .splash-logo {
+          width: 128px;
+          height: 128px;
+        }
+      }
+      @keyframes logoScaleIn {
+        from {
+          opacity: 0;
+          transform: scale(0.92);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      @keyframes splashFadeOut {
+        0% {
+          opacity: 1;
+          visibility: visible;
+        }
+        99% {
+          opacity: 0;
+          visibility: visible;
+        }
+        100% {
+          opacity: 0;
+          visibility: hidden;
+          pointer-events: none;
+        }
+      }
+    </style>
   </head>
   <body class="bg-[#050505] text-[#f4f4f6] selection:bg-[#00ff88]/30 selection:text-[#00ff88]">
+    <!-- Inline SVG Filter for transparent logo rendering -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <filter id="remove-white" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -10 -10 -10 30 -1.5" />
+      </filter>
+    </svg>
+
+    <!-- 0.6s Splash Intro Screen -->
+    <div id="splash" aria-hidden="true">
+      <img
+        class="splash-logo"
+        src="data:image/webp;base64,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"
+        alt="Imam Khan Logo"
+        width="128"
+        height="128"
+      />
+    </div>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
